@@ -10,7 +10,7 @@ const resolvers = {
         throw error;
       }
     },
-    getPokemon: async (_, args) => {
+    getPokemon: async (_: undefined, args: { uid: string }) => {
       try {
         const pokemon = await api.get(`pokemons/${args.uid}`);
         return pokemon.data.length ? pokemon.data[0] : {};
