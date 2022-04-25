@@ -1,54 +1,21 @@
-# Runroom Fullstack Test
+# Frontend Test
 
-Está es una prueba para validar los conocimientos de las personas candidatas al puesto de fullstack developer en Runroom.
+La duración de la prueba no debe ser superior a 4 horas.
 
-**Spoiler Alert!**... va de Pokemons
+## Objetivo
 
-## Stack Tecnológico
+El objetivo de la prueba es valorar tu capacidad de desarrollar una SPA utilizando [Next.js](https://nextjs.org/).
+Te hemos dejado una estructura básica ya montada para que no tengas que empezar de 0. En la carpeta src encontrarás:
 
-* React
-* NextJS
-* Apollo
-* GraphQL
-* Typescript
-* Styled Components
+* Una api ya desarrollada que proveé los datos de la página (**Spoiler Alert!**... va de Pokemons)
+* Unos hooks de React que permiten obtener los datos de esa API
+* Un ejemplo de uso de los hooks en el `index.tsx`
 
-## Descripción
+con esto de base deberás montar:
 
-El proyecto se deberá desarrollar como una SPA en Typescript en la que se deberá desarrollar lo siguiente:
-
-* Cabecera con el logo de Pokemon
-* Un listado
-* Una card del Pokemon seleccionado
-* Una card de su evolución (si la tiene)
-* Footer con el copyright
-
-Los datos de todos los Pokemons están dentro del siguiente archivo, y se deberán consumir utilizando GraphQL:
-
-```
-.
-└── services
-    └── db.json
-```
-
-El API ya está implementado utilizando el [API de Nextjs](https://nextjs.org/docs/api-routes/introduction), falta crear las queries necesarias para traer todos los Pokemons y el Pokemon seleccionado, dentro de la siguiente carpeta encontrarás los schemas de GraphQL, los resolvers, que son los que se comunican con el API, y las rutas del API:
-
-```
-.
-└── pages
-    └── api
-        ├── pokemons
-        ├── resolvers
-        └── schemas
-```
-
-La página se deberá realizar en el siguiente archivo, la inicialización de estilos y tipografías ya están configuradas:
-
-```
-.
-└── pages
-    └── index.tsx
-```
+1. El listado de todos los Pokemon
+2. El detalle de un Pokemon
+3. Las evoluciones de ese Pokemon
 
 Estos son los diseños que esperamos encontrar.
 
@@ -56,7 +23,7 @@ Estos son los diseños que esperamos encontrar.
 |---|---|---|
 | ![Diseño en móvil](docs/mobile.png) | ![Diseño en tablet](docs/tablet.png) | ![Diseño en desktop](docs/desktop.png) |
 
-Los settings y gráficos necesarios de la UI la podéis encontrar en:
+Los settings y gráficos necesarios de la UI la podéis encontrar en `src`:
 
 ```
 .
@@ -82,8 +49,16 @@ El funcionamiento deberá ser el siguiente:
 * Simplicidad de la solución
 * Organización y calidad de código
 * Utilización de componentes modulares
-* Mobile first & RWD
+* Mobile first y Responsive
 * Uso de Git
 * Web Performance Optimization
-* Conocimiento técnico
 * Conocimientos de maquetación (HTML5 y CSS3)
+
+## Bonus points
+
+Si has cumplido todos los requisitos que valoramos, y te sobra tiempo puedes mejorar tu prueba ampliando con estos nuevos requisitos (recomendamos seguir el orden definido):
+
+* Modifica las queries para utilizar GraphQL en lugar de Axios
+* Tipos bien definidos con Typescript
+* Testing unitario de componentes con Jest
+* Testing E2E con Cypress
